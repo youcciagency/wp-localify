@@ -1,0 +1,56 @@
+{
+  "name": "wp-localify",
+  "version": "2.0.0",
+  "description": "Pull live WordPress sites into local Docker environments — multi-site, HTTPS, one CLI.",
+  "type": "module",
+  "license": "ISC",
+  "bin": {
+    "wp-localify": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "keywords": [
+    "wordpress",
+    "docker",
+    "local-development",
+    "cli",
+    "mariadb",
+    "nginx",
+    "mkcert",
+    "rsync"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "postbuild": "node scripts/postbuild.mjs",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "lint": "oxlint src tests scripts",
+    "fmt": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm typecheck && pnpm lint && pnpm test && pnpm build"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "commander": "^14.0.2",
+    "execa": "^9.6.1",
+    "simple-update-notifier": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "oxlint": "^1.79.0",
+    "prettier": "^3.9.6",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  }
+}
