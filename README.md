@@ -23,7 +23,7 @@ Run `wp-localify check` to verify everything is installed.
 ## Install
 
 ```bash
-npm install -g wp-localify   # once published
+npm install -g wp-localify
 # or from a checkout:
 pnpm install && pnpm build && npm link
 ```
@@ -53,7 +53,7 @@ All sites share one Docker network and one nginx gateway that terminates HTTPS p
   - lftp reads `LFTP_PASSWORD` from the environment; the generated script contains no credentials.
   - The Docker stack receives DB credentials through a `chmod 600` `.env` file next to the compose file — the compose YAML only references `${LOCAL_DB_*}` placeholders.
 - **Registry writes are atomic** (temp file + rename). A corrupted `sites.json` is backed up automatically instead of crashing.
-- First launch of v2 migrates any plaintext secrets found in a v1 registry (or legacy `.wp-localize.json`) into the keychain automatically.
+- Any older registry with plaintext secrets (or the legacy single-site `.wp-localize.json` config) is migrated into the keychain automatically on first run.
 
 ## Commands
 

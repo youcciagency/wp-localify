@@ -4,7 +4,6 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 // Keep every command's network/docker surface inert.
 vi.mock("execa", async () => {
   const { vi } = await import("vitest");
-  const { Readable } = await import("node:stream");
   return {
     execa: vi.fn((file: string) => {
       throw new Error(`execa blocked in wiring test: ${file}`);
@@ -49,8 +48,9 @@ beforeEach(async () => {
 
 describe("CLI wiring — commander registration and offline flows", () => {
   it("prints the package version (commander exits with the value under exitOverride)", async () => {
+    const { default: pkg } = await import("../../package.json", { with: { type: "json" } });
     await expect(run(freshProgram(), ["--version"])).rejects.toMatchObject({
-      message: "2.0.0",
+      message: pkg.version,
     });
   });
 

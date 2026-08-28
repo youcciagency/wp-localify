@@ -1,7 +1,16 @@
 {
   "name": "wp-localify",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Pull live WordPress sites into local Docker environments — multi-site, HTTPS, one CLI.",
+  "author": "youcciagency",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youcciagency/wp-localify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/youcciagency/wp-localify/issues"
+  },
+  "homepage": "https://github.com/youcciagency/wp-localify#readme",
   "type": "module",
   "license": "ISC",
   "bin": {

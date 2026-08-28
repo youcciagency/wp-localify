@@ -167,7 +167,7 @@ describe("wp-localify rebuild", () => {
     // FTP sites resolve their keychain password for the fresh pull.
     // (The site object is re-normalized on registry load — updatedAt differs —
     // so assert structurally rather than by identity.)
-    const [pulledSite, pulledCtx, pullOpts] = pullFiles.mock.calls[0] ?? [];
+    const [pulledSite, pulledCtx, pullOpts] = vi.mocked(pullFiles).mock.calls[0] ?? [];
     expect(pulledSite).toMatchObject({ key: site.key, downloadProtocol: "ftp" });
     expect(pulledCtx).toMatchObject({ dirs: { wp: ctx.dirs.wp } });
     expect(pullOpts).toEqual({ ftpPassword: "ftp-secret" });

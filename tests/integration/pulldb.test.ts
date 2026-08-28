@@ -98,12 +98,12 @@ describe("pullDb — remote dump streaming", () => {
     await pullDb(ctx.site, ctx);
 
     const call = execaState.calls.find((c) => c.file === "mysqldump");
-    expect(call).toBeDefined();
+    if (!call) throw new Error("mysqldump was not invoked");
 
-    const env = (call?.opts as { env?: Record<string, string> }).env ?? {};
+    const env = (call.opts as { env?: Record<string, string> }).env ?? {};
     expect(env.MYSQL_PWD).toBe("s3cr3t-pass");
 
-    const argvJson = JSON.stringify(call?.args);
+    const argvJson = JSON.stringify(call.args);
     expect(argvJson).not.toContain("s3cr3t-pass");
     expect(argvJson).not.toContain("ftp-plain");
 
