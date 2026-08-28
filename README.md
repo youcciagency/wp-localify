@@ -158,4 +158,14 @@ WP_LOCALIFY_HOME=/tmp/wp-localify-test node dist/cli.js site list
 
 ## License
 
-ISC
+wp-localify is licensed under the [Elastic License 2.0 (ELv2)](https://www.elastic.co/licensing/elastic-license) — see [`LICENSE`](./LICENSE).
+
+**You may** use, copy, modify, and redistribute it — freely, including inside businesses and for client work.
+
+**You may not**:
+
+1. offer it to third parties as a hosted or managed service,
+2. circumvent license-key functionality, or
+3. remove or obscure licensing, copyright, or trademark notices.
+
+Version 1.0.0 was released under the ISC license and remains available under those terms.
