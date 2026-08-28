@@ -1,6 +1,6 @@
 {
   "name": "wp-localify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pull live WordPress sites into local Docker environments — multi-site, HTTPS, one CLI.",
   "author": "youcciagency",
   "repository": {
