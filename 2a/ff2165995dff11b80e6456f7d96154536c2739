@@ -1,0 +1,19 @@
+package.json
+  s_279cf9d6b60e0e::t_9b72cfec8392b2 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "2aff2165995dff11b80e6456f7d96154536c2739",
+  "prompts": {},
+  "sessions": {
+    "s_279cf9d6b60e0e": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fb59354c5ffe70gUy6FCuq3Vvh",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "human_author": "Youcef <tools@youcef.de>"
+    }
+  }
+}
