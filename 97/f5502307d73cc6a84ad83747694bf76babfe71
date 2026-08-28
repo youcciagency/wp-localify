@@ -1,0 +1,50 @@
+README.md
+  s_1543881e62e444::t_208ee06a1bee9e 82
+src/commands/importing.ts
+  s_1543881e62e444::t_ada5c1a02a035e 3,5
+  s_1543881e62e444::t_05a488b816a3aa 101-179
+src/cli.ts
+  s_d40cc8cacddc49::t_ac3523586dcc20 126-128
+  s_d40cc8cacddc49::t_a7bbcea97abd4d 3-4,118-122
+  s_1543881e62e444::t_70700786b82a8c 91-93
+tests/integration/rebuild.test.ts
+  s_1543881e62e444::t_875686abb4e4c2 168-173
+  s_1543881e62e444::t_0a161479a94a86 1-167,174-243
+src/commands/completions.ts
+  s_1543881e62e444::t_ee192b05ec3458 87
+tests/completions.test.ts
+  s_1543881e62e444::t_7e3c9e2847d9f6 54-58
+src/wordpress/import.ts
+  s_1543881e62e444::t_1195b128a7b90f 183-271
+  s_1543881e62e444::t_8b220120e980a7 111,121-125
+  s_1543881e62e444::t_1c081ff36ce596 4
+  s_1543881e62e444::t_fafbc1fb2abdfc 21-30
+  s_d40cc8cacddc49::t_9493131de20feb 326-331,355-356,358,366,375-453,455-466
+  s_1543881e62e444::t_515b475ba96ae1 474,476
+  s_d40cc8cacddc49::t_0dec42918d1bb8 454
+  s_1543881e62e444::t_e6ac2ae1fa748d 126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "97f5502307d73cc6a84ad83747694bf76babfe71",
+  "prompts": {},
+  "sessions": {
+    "s_1543881e62e444": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fba54fc8cffe6DusK4kuzLWMlD",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "human_author": "Youcef <tools@youcef.de>"
+    },
+    "s_d40cc8cacddc49": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fd4a3c2cfffeII1CE3mjXT24Fr",
+        "model": "stealth/ox-alpha"
+      },
+      "human_author": "Youcef <tools@youcef.de>"
+    }
+  }
+}
