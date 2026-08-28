@@ -84,6 +84,7 @@ export async function completionCandidates(
     "import-db",
     "replace-urls",
     "all",
+    "rebuild",
     "site",
     "gateway",
     "logs",

@@ -79,6 +79,7 @@ Renaming a site's key via `site edit` / `config` is fully supported: wp-localify
 | `import-db`    | Import only (streamed straight into `mysql`, no temp copy)                       |
 | `replace-urls` | Rewrite remote → local URLs, pin home/siteurl, flush cache                       |
 | `all`          | init + pull + import in one go                                                   |
+| `rebuild`      | Fresh pull of files + DB, **wipes the local DB**, imports, replaces URLs          |
 
 ### Day-to-day
 

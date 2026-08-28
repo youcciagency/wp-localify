@@ -51,6 +51,11 @@ describe("completionCandidates", () => {
     expect(fallback).toContain("config");
     expect(fallback).not.toContain("start"); // group-internal subcommand hidden
   });
+
+  it("offers rebuild among top-level commands", async () => {
+    expect(await completionCandidates(["re"], SITES)).toContain("rebuild");
+    expect(await completionCandidates([""], SITES)).toContain("rebuild");
+  });
 });
 
 describe("completion scripts", () => {

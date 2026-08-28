@@ -1,6 +1,7 @@
 import path from "node:path";
 import process from "node:process";
-import { pathToFileURL } from "node:url";
+import { realpathSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { Command } from "commander";
 import * as updateNotifierModule from "simple-update-notifier";
 import pkg from "../package.json" with { type: "json" };
@@ -87,6 +88,9 @@ export function buildProgram(): Command {
       "  wp-localify import          # start stack, import DB, rewrite URLs",
       "  wp-localify open            # https://<site>.test",
       "",
+      "Refresh an existing local copy from the live site:",
+      "  wp-localify rebuild         # fresh files + DB, wipe local DB, rewrite URLs",
+      "",
       "Secrets (DB/FTP passwords) are stored in your OS keychain, never in sites.json.",
     ].join("\n"),
   );
@@ -111,13 +115,17 @@ async function main(): Promise<void> {
   }
 }
 
-// Only boot when executed directly — importing this module (tests, tooling)
-// must stay side-effect free.
+// Boot only when executed directly — importing this module (tests, tooling)
+// must stay side-effect free. Both paths are resolved through the filesystem:
+// installers (`npm link`, pnpm, npx) execute the real file THROUGH a symlink
+// while argv[1] still holds the unresolved link path, so plain string
+// comparison would silently never run the CLI.
 function isEntryModule(): boolean {
   if (!process.argv[1]) return false;
   try {
-    const entryPath = path.resolve(process.argv[1]);
-    return import.meta.url === pathToFileURL(entryPath).href;
+    const entry = realpathSync(path.resolve(process.argv[1]));
+    const self = realpathSync(fileURLToPath(import.meta.url));
+    return entry === self;
   } catch {
     return false;
   }
