@@ -1,0 +1,29 @@
+tests/integration/pulldb.test.ts
+  s_279cf9d6b60e0e::t_2b60729e8ce319 101,103,106
+package.json
+  s_279cf9d6b60e0e::t_3fccfd5de24382 3,5-13
+README.md
+  s_279cf9d6b60e0e::t_dec3533ce66446 56
+  s_279cf9d6b60e0e::t_d803c0784a0d53 26
+tests/integration/cli-wiring.test.ts
+  s_279cf9d6b60e0e::t_d21a5233300def 51
+  s_279cf9d6b60e0e::t_6cf67bd103255a 53
+tests/integration/rebuild.test.ts
+  s_279cf9d6b60e0e::t_38937175e95526 170
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "25cad8729af29e9a15a7a4b99489a316c0390a03",
+  "prompts": {},
+  "sessions": {
+    "s_279cf9d6b60e0e": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fb59354c5ffe70gUy6FCuq3Vvh",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "human_author": "Youcef <tools@youcef.de>"
+    }
+  }
+}
