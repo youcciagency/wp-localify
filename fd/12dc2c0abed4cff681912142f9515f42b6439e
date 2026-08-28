@@ -1,0 +1,23 @@
+LICENSE
+  s_279cf9d6b60e0e::t_301546be7bd606 1-2,4-6,8-11,13-107
+README.md
+  s_279cf9d6b60e0e::t_d4eb2697e2e986 161-171
+package.json
+  s_279cf9d6b60e0e::t_13fb214bb9a9c9 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "fd12dc2c0abed4cff681912142f9515f42b6439e",
+  "prompts": {},
+  "sessions": {
+    "s_279cf9d6b60e0e": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fb59354c5ffe70gUy6FCuq3Vvh",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "human_author": "Youcef <tools@youcef.de>"
+    }
+  }
+}
