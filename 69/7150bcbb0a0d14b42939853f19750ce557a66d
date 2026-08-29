@@ -1,0 +1,21 @@
+README.md
+  s_c3e5f364d6977b::t_843d2822c3523b 5,12-33,53,64-65,71,73-75,77-87,92-94,102-108,113,119-121,131-137,149-155,163-165,173,186,188,190,192-200,208,221-230,235-244,250-254,259,265-291
+  s_c3e5f364d6977b::t_807a96c6b7d84f 88-91,95-101,109-112,114-118,122-130,138-148,156-162,166-171,202-206
+  s_c3e5f364d6977b::t_1e3680bd128e43 172,201,207,292
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "697150bcbb0a0d14b42939853f19750ce557a66d",
+  "prompts": {},
+  "sessions": {
+    "s_c3e5f364d6977b": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fb12db235ffex0vPzT5WSeUYzM",
+        "model": "z-ai/glm-5.3-flash"
+      },
+      "human_author": "Youcef <tools@youcef.de>"
+    }
+  }
+}
